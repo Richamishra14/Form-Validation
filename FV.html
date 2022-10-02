@@ -1,0 +1,74 @@
+
+<!DOCTYPE html> 
+<html> 
+<head>
+<title> Form Validation </title>
+<style>
+button { 
+       background-color: skyblue; 
+       width: 116%;
+        padding: 15px; 
+        border: none; 
+        margin-top: 37px;
+        margin-left: -25px;
+
+        
+         } 
+ input[type=email], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 1px solid rgb(158, 135, 235); 
+        box-sizing: border-box; 
+    }
+      
+   
+ .container { 
+    padding: 25px; 
+        border: 1px solid grey;
+        border-radius: 2%;
+        background-color:white;
+        height: 277px;
+        width: 320px;
+        margin-left: 400px;
+        margin-top: 150px;
+        box-shadow: 5px 10px rgb(110, 41, 222);
+    }
+    h1{
+        background-color:  rgb(185, 59, 204);
+        height: 50px;
+        clip-path: polygon(0% 0% ,75% 0%, 100% 50% ,75% 100%, 0% 100%);
+        width: 180px;
+        margin-left: -24px;
+        margin-top: -24px;
+        border: radius 2px;
+
+    } 
+</style> 
+</head>  
+<body>
+    <div class="container">
+            <h1> User Login </h1>  
+            <form name="Adarsh" onsubmit="return sub()">
+                <input type="email" placeholder="Email Address" name="username" id="user">
+                <input type="password" placeholder="Password" name="password" id="pass">
+                <input type="password" placeholder="New Password" name="cpassword" >
+                <input type="submit" value="login" name="submit">
+            </form>
+        </div> 
+<script>
+        function sub(){
+            var a=document.getElementById("user").value;
+            var b=document.getElementById("pass").value;
+            if(a=="" || a=="null"){
+                alert("User Name can't be blank");
+            }
+            else if(b.length>=6 || b==""){
+                alert("password atleast 6 character and digit");
+            }
+        
+    }
+</script>
+</body>   
+</html>
